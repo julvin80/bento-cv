@@ -1,0 +1,9 @@
+{
+  "name": "bento-cv",
+  "version": "1.0.0",
+  "description": "Bento-style personal CV/portfolio — A responsive, grid-based resume website built with CSS Grid, Flexbox, and vanilla JavaScript. Features smooth scrolling, scroll-to-top button, and card entrance animations.",
+  "homepage": "https://julvin80.github.io/bento-cv",
+  "scripts": {
+    "dev": "npx serve ."
+  }
+}

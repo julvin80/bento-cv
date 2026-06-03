@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --bg-page: #f3f4f6;       /* Page */
+  --bg-card: #ffffff;       /* Card */
+  --text-main: #111827;     /* Text 1*/
+  --text-muted: #6b7280;    /* Text 2 */
+  
+  --accent-green: #DCFC52;  /* Experience */
+  --accent-green-text: #166534;
+  
+  --accent-purple: #8b5cf6; /* Education */
+  
+  --border-color: #e5e7eb;
+  --border-color-about: #FF9080;
+  --border-color-skills: #DCFC52;
+  --radius: 24px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.5;
+  padding: 10px;
+}
+
+.bento-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  transition: border-color 0.3s;
+}
+
+
+
+.bento-card:hover {
+  transform: translateY(-2px);
+}
+
+.bento-hero {
+  border-radius: 0px;
+  background: #D9D9D9;
+  color: white;
+  border: none;
+}
+.bento-hero h1 {
+  color: var(--text-main);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.bento-hero .role {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 24px;
+}
+.bento-hero .tagline {
+  font-size: 1.4rem;
+  color: #000000;
+  margin-top: auto;
+}
+
+.bento-about {
+    border: 1px solid var(--border-color-about);
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.bento-skills {
+    border: 1px solid var(--border-color-skills);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: var(--bg-page);
+  padding: 6px 12px;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.bento-experience {
+  border-color: var(--border-color-about);
+}
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.exp-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+  background: var(--accent-green);
+  padding: 16px;
+  border-radius: 16px;
+  color: var(--text-main);
+}
+
+.exp-item h3 { color: var(--text-main); }
+.exp-item p { color: var(--text-main); }
+.exp-company {
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.bento-projects {
+  border-color: var(--accent-purple);
+}
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.project-item {
+  background: var(--accent-purple);
+  padding: 16px;
+  border-radius: 16px;
+  color: white;
+}
+.project-item h3 { color: white; }
+.project-item p { color: rgba(0, 0, 0, 0.9); }
+
+.bento-education {
+  background: var(--accent-purple);
+  border-color: var(--accent-purple);
+}
+.edu-degree {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: var(--accent-green);
+}
+
+.edu-school {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: var(--accent-green);
+}
+
+.edu-year {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: var(--accent-green);
+}
+
+.bento-goal {
+   background: #D9D9D9;
+}
+
+.bento-design {
+  border-radius: 0;
+  background: var(--accent-green);
+  border-color: var(--accent-green);
+}
+.bento-design h2 { color: var(--text-main); }
+.bento-design p { color: var(--text-main); font-weight: 500; }
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-purple);
+  outline-offset: 4px;
+}
+
+
+.scroll-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--accent-purple);
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s, background 0.3s;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.scroll-top:hover {
+  background: #7c3aed;
+}
+
+
+.bento-card {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.bento-card:nth-child(1) { animation-delay: 0.1s; }
+.bento-card:nth-child(2) { animation-delay: 0.2s; }
+.bento-card:nth-child(3) { animation-delay: 0.3s; }
+.bento-card:nth-child(4) { animation-delay: 0.4s; }
+.bento-card:nth-child(5) { animation-delay: 0.5s; }
+.bento-card:nth-child(6) { animation-delay: 0.6s; }
+.bento-card:nth-child(7) { animation-delay: 0.7s; }
