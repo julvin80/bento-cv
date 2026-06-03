@@ -1,6 +1,20 @@
 # Bento-style CV
 
-Bento-style CV — CSS Grid + Flexbox practice project.
+Bento-style CV — responsive personal portfolio built with CSS Grid & Flexbox
+
+## Live Demo
+
+👉 https://julvin80.github.io/bento-cv/
+
+## Purpose
+
+This project was built as a continuation of my CSS learning journey:
+
+Flexbox → layout fundamentals  
+Grid → advanced layout system  
+Bento CV → applying both in a real portfolio format
+
+The goal was to design a modern CV layout inspired by bento UI patterns.
 
 ## Structure
 
